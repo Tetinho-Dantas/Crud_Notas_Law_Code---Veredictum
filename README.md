@@ -48,6 +48,28 @@ http://localhost:8080/notas-fiscais
 }
 
 ---
+
+### 🆕 Atualizar uma nota fiscal
+`PUT`  
+http://localhost:8080/notas-fiscais/2
+
+#### 🔧 Body (JSON)
+
+{
+  "idNotaFiscal": 2,
+  "fkCliente": 1,
+  "dataCriacao": "2024-05-15",
+  "etiqueta": "NF-456",
+  "valor": 250.50,
+  "dataVencimento": "2025-12-31",
+  "descricao": "Atualização da nota fiscal",
+  "urlNuvem": "https://drive.exemplo.com/nf456",
+  "isEmitida": false
+}
+---
+
+
+
 ### ❌ Excluir nota fiscal
 `DELETE`
 http://localhost:8080/notas-fiscais/1
