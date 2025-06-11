@@ -38,9 +38,13 @@ http://localhost:8080/notas-fiscais
 #### 🔧 Body (JSON)
 
 {
- "clienteId": 1,
-  "valorTotal": 199.99,
-  "dataCriacao": "2024-08-10"
+  "fkCliente": 1,
+  "etiqueta": "NF-123",
+  "valor": 100.00,
+  "dataVencimento": "2025-12-31",
+  "descricao": "Serviço prestado",
+  "urlNuvem": "https://drive.exemplo.com/nf123",
+  "isEmitida": true
 }
 
 ---
