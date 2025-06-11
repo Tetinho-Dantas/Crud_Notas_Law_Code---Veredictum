@@ -1,0 +1,1589 @@
+type: collection.insomnia.rest/5.0
+name: Law&Code
+meta:
+  id: wrk_6bdd678352dd4929afe2cfa17525ad36
+  created: 1744836003030
+  modified: 1744836003030
+collection:
+  - name: Cliente
+    meta:
+      id: fld_7982ec5932a14d4388c83f7852ea81b2
+      created: 1744837414640
+      modified: 1745794533242
+      sortKey: -1745790072328.25
+    children:
+      - url: http://localhost:8080/clientes/5
+        name: Buscar cliente por ID
+        meta:
+          id: req_1753a4fe883c4c59ba6c6283b2f6363c
+          created: 1744837417599
+          modified: 1745789998157
+          isPrivate: false
+          sortKey: -1744840170153
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes
+        name: Buscar todos os clientes
+        meta:
+          id: req_16325d06195d43d994efba2fddd1b3d1
+          created: 1744838519014
+          modified: 1745789999726
+          isPrivate: false
+          sortKey: -1744840180210
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes
+        name: Cadastrar novo cliente
+        meta:
+          id: req_d8ebeee326334792881229edea62f650
+          created: 1744838549661
+          modified: 1745794356693
+          isPrivate: false
+          sortKey: -1744838549661
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"idCliente": 150,
+            	"nome": "Marcia Oliveira",
+            	"fkIndicador": 2,
+            	"email": "marcia.oliveira@email.com",
+            	"rg": "0987654123",
+            	"cpf": "38851238863",
+            	"cnpj": "12354789658745",
+            	"dataNascimento": "1985-12-20",
+            	"dataInicio": "2024-01-09",
+            	"endereco": "Rua da Lua, 201",
+            	"cep": "11223355",
+            	"descricao": "Indicada pelo Pedro",
+            	"inscricaoEstadual": "111222348",
+            	"isProBono": false,
+            	"isAtivo": true,
+            	"isJuridico": false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/12
+        name: Atuaização parcial do cliente
+        meta:
+          id: req_f6a4366887074f5cb036e5c16c00f6e6
+          created: 1744839634986
+          modified: 1744839911209
+          isPrivate: false
+          sortKey: -1744839634986
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"nome": "Marcia Souza",
+            	"fkIndicador": 2,
+            	"email": "marcia.oliveira@email.com",
+            	"rg": "0987654123",
+            	"cpf": "38851238863",
+            	"cnpj": "12354789658745",
+            	"dataNascimento": "1985-12-20",
+            	"dataInicio": "2024-01-09",
+            	"endereco": "Rua da Lua, 201",
+            	"cep": "11223355",
+            	"descricao": "Indicada pelo Pedro",
+            	"inscricaoEstadual": "111222348",
+            	"isProBono": false,
+            	"isAtivo": true,
+            	"isJuridico": false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/2
+        name: Atualizar cliente
+        meta:
+          id: req_da810bb0afb64af999aec5ff44010418
+          created: 1744839950867
+          modified: 1745790002764
+          isPrivate: false
+          sortKey: -1744840167663.75
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"idCliente": 1,
+            	"nome": "Marcia Souza",
+            	"fkIndicador": 2,
+            	"email": "marcia.oliveira@email.com",
+            	"rg": "0987654123",
+            	"cpf": "38851238863",
+            	"cnpj": "12354789658745",
+            	"dataNascimento": "1985-12-20",
+            	"dataInicio": "2024-01-09",
+            	"endereco": "Rua da Lua, 201",
+            	"cep": "11223355",
+            	"descricao": "Indicada pelo Pedro",
+            	"inscricaoEstadual": "111222348",
+            	"isProBono": false,
+            	"isAtivo": true,
+            	"isJuridico": false
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/12/ativar
+        name: Ativar cliente
+        meta:
+          id: req_463bb38744704937a597268738f05eaa
+          created: 1744840160196
+          modified: 1744840210411
+          isPrivate: false
+          sortKey: -1744840160196
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/12/inativar
+        name: Inativar cliente
+        meta:
+          id: req_664954d604154a939a050a713547b278
+          created: 1744840180110
+          modified: 1745790001029
+          isPrivate: false
+          sortKey: -1744840165174.5
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Login/Logout
+    meta:
+      id: fld_c04f4c5f79394f0ab9f723f0647e3a02
+      created: 1744840697145
+      modified: 1745794529901
+      sortKey: -1745790072347
+    children:
+      - url: http://localhost:8080/usuarios/logar
+        name: Login
+        meta:
+          id: req_8507e65c0f3f4e39b8db30a36b50d3e9
+          created: 1744843594644
+          modified: 1745957681220
+          isPrivate: false
+          sortKey: -1744843716304
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "lismara.matos@email.com",
+              "senha": "senha123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/deslogar/1
+        name: Logout
+        meta:
+          id: req_9757f1136da74ecfb4c4635984379f36
+          created: 1744843716204
+          modified: 1745957665836
+          isPrivate: false
+          sortKey: -1744843716204
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tipo Lembrete
+    meta:
+      id: fld_bcea208b57e643cb951eafc9b788ca36
+      created: 1745789613461
+      modified: 1745794527457
+      sortKey: -1745790072422
+    children:
+      - url: http://localhost:8080/tipo-lembrete/1
+        name: Tipo Lembrete por ID
+        meta:
+          id: req_09b81efe04764e1caf7f5bf541d7fe82
+          created: 1745789617866
+          modified: 1745797949111
+          isPrivate: false
+          sortKey: -1745789617866
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/tipo-lembrete
+        name: Buscar todos os lembretes
+        meta:
+          id: req_4280a73ac6ab4fdd89e312476ac274e6
+          created: 1745789721330
+          modified: 1745789787327
+          isPrivate: false
+          sortKey: -1745789617966
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/tipo-lembrete
+        name: Criar lembrete
+        meta:
+          id: req_b61934ea7df1462ab63ba5d441fc0c00
+          created: 1745789739059
+          modified: 1745789771288
+          isPrivate: false
+          sortKey: -1745080191619.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idTipoLembrete": 5,
+              "tipo": "Feliz Natal"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/tipo-lembrete/5
+        name: Atualizar lembrete por ID
+        meta:
+          id: req_f19b59581c154215acc90c1b8468e116
+          created: 1745789807249
+          modified: 1745789921485
+          isPrivate: false
+          sortKey: -1745080191519.5
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idTipoLembrete": 5,
+              "tipo": "Feliz ano novo"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/tipo-lembrete/5
+        name: Deletar lembrete por ID
+        meta:
+          id: req_b38aa3e47c2048528afc912465d9718f
+          created: 1745789949571
+          modified: 1745789986034
+          isPrivate: false
+          sortKey: -1744961953861.75
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuários
+    meta:
+      id: fld_f1d76a8be45d4f29abefff5d78d78d03
+      created: 1745790071622
+      modified: 1745794528606
+      sortKey: -1745790072372
+    children:
+      - url: http://localhost:8080/usuarios
+        name: Listar todos usuários
+        meta:
+          id: req_533879d7c9004381bca861ceb0f5ff15
+          created: 1745790077053
+          modified: 1745797802771
+          isPrivate: false
+          sortKey: -1745789962381.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/lista-por-sem-administrador
+        name: Listar todos usuários sem adm
+        meta:
+          id: req_ef5c1240396c4711b9b14a59d42b1b2d
+          created: 1745790240599
+          modified: 1745790255926
+          isPrivate: false
+          sortKey: -1745789847509.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/lista-por-sem-administrador
+        name: Listar todos usuários com adm
+        meta:
+          id: req_fa421e37fab549368babdc55a1f4d99b
+          created: 1745790270054
+          modified: 1745790275481
+          isPrivate: false
+          sortKey: -1745789962281.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: Cadastrar novo usuário
+        meta:
+          id: req_1c676441d78e4328b8884b02302d2068
+          created: 1745790405691
+          modified: 1745797865636
+          isPrivate: false
+          sortKey: -1745789847409.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "idUsuario": 0,
+              "nome": "Pedro Souza",
+              "email": "pedro@email.com",
+            	"senha": "Pedro25",
+              "isAtivo": true,
+              "fkAdm": 1,
+              "isAdm": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/ativar/6
+        name: Ativar usuário
+        meta:
+          id: req_04d81d09b86b468cbf0d6d2a3f0b71f0
+          created: 1745790706162
+          modified: 1745790731646
+          isPrivate: false
+          sortKey: -1745789847309.5
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/inativar/6
+        name: Inativar usuário
+        meta:
+          id: req_826f2b7c04a54fa48fe056bf54c47b0d
+          created: 1745790741584
+          modified: 1745790751021
+          isPrivate: false
+          sortKey: -1745789732637.75
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/alterar-senha/9
+        name: Alterar senha
+        meta:
+          id: req_15ab6314e8b148a5996c349f8b91574e
+          created: 1745790766753
+          modified: 1745792621345
+          isPrivate: false
+          sortKey: -1745789732537.75
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"senha": "Pedro21"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: Atualizar parcial
+        meta:
+          id: req_bbfeba221e0845e98bdf2ec8acd3768b
+          created: 1745790923298
+          modified: 1745790995134
+          isPrivate: false
+          sortKey: -1745789732437.75
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	  "nome": "Pedro Souza"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: "Atualizar "
+        meta:
+          id: req_2c46049f5824452aaf4b4b94d153a8e3
+          created: 1745791009386
+          modified: 1745791017917
+          isPrivate: false
+          sortKey: -1745789675201.875
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "idUsuario": 0,
+              "nome": "string",
+              "email": "string",
+              "senha": "string",
+              "isAtivo": true,
+              "isAdm": true,
+              "administrador": "string",
+              "ativo": true,
+              "adm": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Status Agendamento
+    meta:
+      id: fld_12d98118dab6411880b0cc476388b7e8
+      created: 1745793372450
+      modified: 1745794531155
+      sortKey: -1745790072334.5
+    children:
+      - url: http://localhost:8080/status-agendamento
+        name: Listar todos os status
+        meta:
+          id: req_c4709f07030246f4b58a8d99009a4450
+          created: 1745793376110
+          modified: 1745793429564
+          isPrivate: false
+          sortKey: -1745793376110
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/status-agendamento/1
+        name: Listar por ID
+        meta:
+          id: req_ee5260b1ed114afea16bbce5a4849774
+          created: 1745793384643
+          modified: 1745793442816
+          isPrivate: false
+          sortKey: -1745791669195.625
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/status-agendamento
+        name: Criar novo status
+        meta:
+          id: req_55e47f7a4bf74edba2b621b2506d6b2d
+          created: 1745793387767
+          modified: 1745793492066
+          isPrivate: false
+          sortKey: -1745790815738.4375
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idStatusAgendamento": 0,
+              "descricao": "Tempo Real"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/status-agendamento/7
+        name: Atualizar status por ID
+        meta:
+          id: req_2d08b1106863480a96d0c50d980aa6ad
+          created: 1745793390450
+          modified: 1745793613794
+          isPrivate: false
+          sortKey: -1745790389009.8438
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idStatusAgendamento": 0,
+              "descricao": "Em 15 minutos"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/status-agendamento/7
+        name: Deletar status por ID
+        meta:
+          id: req_61a508392590403ab88cf377be8a3f36
+          created: 1745793392314
+          modified: 1745793620031
+          isPrivate: false
+          sortKey: -1745790175645.5469
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Historico de Status de agendamento
+    meta:
+      id: fld_8ef2854f809c447cb5270a1a34bb15d1
+      created: 1745793652473
+      modified: 1745794534422
+      sortKey: -1745790072325.125
+    children:
+      - url: http://localhost:8080/historico-status-agendamento
+        name: Listar todos
+        meta:
+          id: req_d917ccf13fa64e10a823af074d365876
+          created: 1745793666231
+          modified: 1745793721031
+          isPrivate: false
+          sortKey: -1745793666231
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/historico-status-agendamento/1
+        name: Listar por ID
+        meta:
+          id: req_37c8bfab0c7a4267982ab7b9f57d2c78
+          created: 1745793683558
+          modified: 1745793742533
+          isPrivate: false
+          sortKey: -1745793521170.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/historico-status-agendamento/1
+        name: Atualizar histórico de agendamento por ID
+        meta:
+          id: req_9153252a7db4470a8b94526bfda9d721
+          created: 1745793686081
+          modified: 1745793982697
+          isPrivate: false
+          sortKey: -1745793448640.25
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idHistoricoAgendamento": 0,
+              "atendimento": {
+                "idAtendimento": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "string",
+                  "nome": "string",
+                  "email": "string",
+                  "rg": "string",
+                  "cpf": "string",
+                  "cnpj": "string",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "string",
+                  "cep": "82706112",
+                  "descricao": "string",
+                  "inscricaoEstadual": "stringstr",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true,
+                  "ativo": true,
+                  "juridico": true,
+                  "proBono": true
+                }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/historico-status-agendamento
+        name: Criar histórico de agendamento
+        meta:
+          id: req_29344dc6274e4518ae140a10f634ffd6
+          created: 1745793689211
+          modified: 1745793852937
+          isPrivate: false
+          sortKey: -1745793484905.375
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+              "idHistoricoAgendamento": 0,
+              "atendimento": {
+                "idAtendimento": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "CLIENTE-001",
+                  "nome": "Pedro Souza",
+                  "email": "pedro@email.com",
+                  "rg": "1234567",
+                  "cpf": "12345678900",
+                  "cnpj": "12345678000199",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "Rua Exemplo, 123",
+                  "cep": "39332127",
+                  "descricao": "Cliente Teste",
+                  "inscricaoEstadual": "123456789",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true
+                },
+                "usuario": {
+                  "idUsuario": 0,
+                  "nome": "Advogado Exemplo",
+                  "email": "advogado@email.com",
+                  "senha": "senha123",
+                  "isAtivo": true,
+                  "isAdm": true,
+                  "administrador": "Admin Geral"
+                },
+                "etiqueta": "Processo Civil",
+                "valor": 1000,
+                "descricao": "Atendimento Inicial",
+                "dataInicio": "2025-04-27T22:42:33.585Z",
+                "dataFim": "2025-04-27T22:42:33.585Z",
+                "dataVencimento": "2025-04-27T22:42:33.585Z",
+                "isPago": true
+              },
+              "nota": {
+                "idNotaFiscal": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "CLIENTE-001",
+                  "nome": "Pedro Souza",
+                  "email": "pedro@email.com",
+                  "rg": "1234567",
+                  "cpf": "12345678900",
+                  "cnpj": "12345678000199",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "Rua Exemplo, 123",
+                  "cep": "04346777",
+                  "descricao": "Cliente Nota",
+                  "inscricaoEstadual": "123456789",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true
+                },
+                "dataCriacao": "2025-04-27",
+                "etiqueta": "Nota Atendimento",
+                "valor": 1000,
+                "dataVencimento": "2025-04-27",
+                "descricao": "Nota Fiscal do Atendimento",
+                "urlNuvem": "http://exemplo.com/nota",
+                "isEmitida": true
+              },
+              "conta": {
+                "idConta": 0,
+                "usuario": {
+                  "idUsuario": 0,
+                  "nome": "Advogado Exemplo",
+                  "email": "advogado@email.com",
+                  "senha": "senha123",
+                  "isAtivo": true,
+                  "isAdm": true,
+                  "administrador": "Admin Geral"
+                },
+                "dataCriacao": "2025-04-27",
+                "etiqueta": "Conta Atendimento",
+                "valor": 1000,
+                "dataVencimento": "2025-04-27",
+                "urlNuvem": "http://exemplo.com/conta",
+                "descricao": "Conta a pagar do atendimento",
+                "isPago": true
+              },
+              "statusAgendamento": {
+                "idStatusAgendamento": 1,
+                "descricao": "Agendado"
+              },
+              "dataHoraAlteracao": "2025-04-27T22:42:33.585Z"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/historico-status-agendamento/1
+        name: Excluir histórico de agendamento por ID
+        meta:
+          id: req_f484c0463ca34a9c8d3561dd880c43bf
+          created: 1745793690998
+          modified: 1745793988968
+          isPrivate: false
+          sortKey: -1745793412375.125
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Log envio de lembrete
+    meta:
+      id: fld_a8ea5ddd6a504fc59c8d496faf9fb96c
+      created: 1745794046531
+      modified: 1745794349699
+      sortKey: -1745790072022
+    children:
+      - url: http://localhost:8080/log-envio-lembrete
+        name: Listar todos os envios de lembrete
+        meta:
+          id: req_1925f039cd324494afd1781085328a50
+          created: 1745794050386
+          modified: 1745794083692
+          isPrivate: false
+          sortKey: -1745794050386
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/log-envio-lembrete/1
+        name: Listar todos os envios de lembrete por ID
+        meta:
+          id: req_02bb24df7c274831b6d526345c643428
+          created: 1745794062272
+          modified: 1745794111353
+          isPrivate: false
+          sortKey: -1745793858308.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/log-envio-lembrete/1
+        name: Excluir um log de envio de lembrete por ID
+        meta:
+          id: req_c4c91233a3fb4194b23b955b5307f31c
+          created: 1745794064590
+          modified: 1745794244608
+          isPrivate: false
+          sortKey: -1745793762269.75
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/log-envio-lembrete
+        name: Criar log de envio de lembrete
+        meta:
+          id: req_dc73734000e84f7fbe6c78217c6181d6
+          created: 1745794066228
+          modified: 1745794209524
+          isPrivate: false
+          sortKey: -1745793810289.125
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idLogEnvioLembrete": 0,
+              "tipoLembrete": {
+                "idTipoLembrete": 0,
+                "tipo": "string"
+              },
+              "notaFiscal": {
+                "idNotaFiscal": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "string",
+                  "nome": "string",
+                  "email": "string",
+                  "rg": "string",
+                  "cpf": "string",
+                  "cnpj": "string",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "string",
+                  "cep": "48551345",
+                  "descricao": "string",
+                  "inscricaoEstadual": "stringstr",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true,
+                  "ativo": true,
+                  "juridico": true,
+                  "proBono": true
+                },
+                "dataCriacao": "2025-04-27",
+                "etiqueta": "string",
+                "valor": 0,
+                "dataVencimento": "2025-04-27",
+                "descricao": "string",
+                "urlNuvem": "string",
+                "isEmitida": true,
+                "emitida": true
+              },
+              "conta": {
+                "idConta": 0,
+                "usuario": {
+                  "idUsuario": 0,
+                  "nome": "string",
+                  "email": "string",
+                  "senha": "string",
+                  "isAtivo": true,
+                  "isAdm": true,
+                  "administrador": "string",
+                  "ativo": true,
+                  "adm": true
+                },
+                "dataCriacao": "2025-04-27",
+                "etiqueta": "string",
+                "valor": 0,
+                "dataVencimento": "2025-04-27",
+                "urlNuvem": "string",
+                "descricao": "string",
+                "isPago": true,
+                "pago": true
+              },
+              "atendimento": {
+                "idAtendimento": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "string",
+                  "nome": "string",
+                  "email": "string",
+                  "rg": "string",
+                  "cpf": "string",
+                  "cnpj": "string",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "string",
+                  "cep": "57393520",
+                  "descricao": "string",
+                  "inscricaoEstadual": "stringstr",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true,
+                  "ativo": true,
+                  "juridico": true,
+                  "proBono": true
+                },
+                "usuario": {
+                  "idUsuario": 0,
+                  "nome": "string",
+                  "email": "string",
+                  "senha": "string",
+                  "isAtivo": true,
+                  "isAdm": true,
+                  "administrador": "string",
+                  "ativo": true,
+                  "adm": true
+                },
+                "etiqueta": "string",
+                "valor": 1,
+                "descricao": "string",
+                "dataInicio": "2025-04-27T22:48:47.231Z",
+                "dataFim": "2025-04-27T22:48:47.231Z",
+                "dataVencimento": "2025-04-27T22:48:47.231Z",
+                "isPago": true,
+                "pago": true
+              },
+              "dataHoraCriacao": "2025-04-27T22:48:47.231Z",
+              "mensagem": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/log-envio-lembrete/1
+        name: Atualizar um log de envio de lembrete por ID
+        meta:
+          id: req_0eb5609fbd4d440ea660440fe3378349
+          created: 1745794068186
+          modified: 1745794214365
+          isPrivate: false
+          sortKey: -1745793786279.4375
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idLogEnvioLembrete": 0,
+              "tipoLembrete": {
+                "idTipoLembrete": 0,
+                "tipo": "string"
+              },
+              "notaFiscal": {
+                "idNotaFiscal": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "string",
+                  "nome": "string",
+                  "email": "string",
+                  "rg": "string",
+                  "cpf": "string",
+                  "cnpj": "string",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "string",
+                  "cep": "48551345",
+                  "descricao": "string",
+                  "inscricaoEstadual": "stringstr",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true,
+                  "ativo": true,
+                  "juridico": true,
+                  "proBono": true
+                },
+                "dataCriacao": "2025-04-27",
+                "etiqueta": "string",
+                "valor": 0,
+                "dataVencimento": "2025-04-27",
+                "descricao": "string",
+                "urlNuvem": "string",
+                "isEmitida": true,
+                "emitida": true
+              },
+              "conta": {
+                "idConta": 0,
+                "usuario": {
+                  "idUsuario": 0,
+                  "nome": "string",
+                  "email": "string",
+                  "senha": "string",
+                  "isAtivo": true,
+                  "isAdm": true,
+                  "administrador": "string",
+                  "ativo": true,
+                  "adm": true
+                },
+                "dataCriacao": "2025-04-27",
+                "etiqueta": "string",
+                "valor": 0,
+                "dataVencimento": "2025-04-27",
+                "urlNuvem": "string",
+                "descricao": "string",
+                "isPago": true,
+                "pago": true
+              },
+              "atendimento": {
+                "idAtendimento": 0,
+                "cliente": {
+                  "idCliente": 0,
+                  "indicador": "string",
+                  "nome": "string",
+                  "email": "string",
+                  "rg": "string",
+                  "cpf": "string",
+                  "cnpj": "string",
+                  "dataNascimento": "2025-04-27",
+                  "dataInicio": "2025-04-27",
+                  "endereco": "string",
+                  "cep": "57393520",
+                  "descricao": "string",
+                  "inscricaoEstadual": "stringstr",
+                  "isProBono": true,
+                  "isAtivo": true,
+                  "isJuridico": true,
+                  "ativo": true,
+                  "juridico": true,
+                  "proBono": true
+                },
+                "usuario": {
+                  "idUsuario": 0,
+                  "nome": "string",
+                  "email": "string",
+                  "senha": "string",
+                  "isAtivo": true,
+                  "isAdm": true,
+                  "administrador": "string",
+                  "ativo": true,
+                  "adm": true
+                },
+                "etiqueta": "string",
+                "valor": 1,
+                "descricao": "string",
+                "dataInicio": "2025-04-27T22:48:47.231Z",
+                "dataFim": "2025-04-27T22:48:47.231Z",
+                "dataVencimento": "2025-04-27T22:48:47.231Z",
+                "isPago": true,
+                "pago": true
+              },
+              "dataHoraCriacao": "2025-04-27T22:48:47.231Z",
+              "mensagem": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Atendimentos
+    meta:
+      id: fld_4a54bc3617b544128579dd65680acb89
+      created: 1745794410218
+      modified: 1745794525178
+      sortKey: -1745790072322
+    children:
+      - url: http://localhost:8080/atendimentos
+        name: Listar todos os atendimentos
+        meta:
+          id: req_2af76abf4ff64de0a44fa0f00cb40709
+          created: 1745794539986
+          modified: 1745795419565
+          isPrivate: false
+          sortKey: -1745794539986
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/mudar-status/1/2
+        name: Mudar status de atendimento por ID
+        meta:
+          id: req_fd540e99c9b04e84b4d6eb95606443e1
+          created: 1745794556824
+          modified: 1745798091634
+          isPrivate: false
+          sortKey: -1745794295186
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos
+        name: Criar novo atendimento
+        meta:
+          id: req_c3129d0c55f8456bbe5a27cc80ee8b1e
+          created: 1745794560368
+          modified: 1745795228607
+          isPrivate: false
+          sortKey: -1745794417586
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idAtendimento": 0,
+              "cliente": {
+                "idCliente": 0,
+                "indicador": "string",
+                "nome": "string",
+                "email": "string",
+                "rg": "string",
+                "cpf": "string",
+                "cnpj": "string",
+                "dataNascimento": "2025-04-27",
+                "dataInicio": "2025-04-27",
+                "endereco": "string",
+                "cep": "47592614",
+                "descricao": "string",
+                "inscricaoEstadual": "stringstr",
+                "isProBono": true,
+                "isAtivo": true,
+                "isJuridico": true,
+                "ativo": true,
+                "juridico": true,
+                "proBono": true
+              },
+              "usuario": {
+                "idUsuario": 0,
+                "nome": "string",
+                "email": "string",
+                "senha": "string",
+                "isAtivo": true,
+                "isAdm": true,
+                "administrador": "string",
+                "ativo": true,
+                "adm": true
+              },
+              "etiqueta": "string",
+              "valor": 1,
+              "descricao": "string",
+              "dataInicio": "2025-04-27T23:06:24.751Z",
+              "dataFim": "2025-04-27T23:06:24.751Z",
+              "dataVencimento": "2025-04-27T23:06:24.751Z",
+              "isPago": true,
+              "pago": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/1
+        name: Editar atendimento completo por ID
+        meta:
+          id: req_82fdcae44de343f1b6440be1873a42fe
+          created: 1745794565108
+          modified: 1745795346329
+          isPrivate: false
+          sortKey: -1745794356386
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            	{
+            		"idAgendamento": 1,
+            		"fkCliente": 4,
+            		"fkUsuario": 2,
+            		"etiqueta": "Suporte Técnico",
+            		"valor": 350,
+            		"descricao": "Suporte para problemas em sistemas de TI.",
+            		"dataInicio": "2023-06-15T14:00:00",
+            		"dataFim": "2023-06-15T16:00:00",
+            		"dataVencimento": "2023-06-15T16:30:00",
+            		"isPago": true
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/listar-por-cliente/4
+        name: Listar atendimentos por cliente
+        meta:
+          id: req_94d9ebb640b9498da968a000bf39f15e
+          created: 1745794567060
+          modified: 1745795163934
+          isPrivate: false
+          sortKey: -1745794478786
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/listar-por-status/1
+        name: Listar atendimentos por status
+        meta:
+          id: req_d37b874d15e246229d38d2f91b5855b1
+          created: 1745794568668
+          modified: 1745795453364
+          isPrivate: false
+          sortKey: -1745794509386
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/listar-por-usuario/1
+        name: Listar atendimentos por usuário
+        meta:
+          id: req_6b699ecb4970498fac55dbd4b421368e
+          created: 1745794570396
+          modified: 1745795152135
+          isPrivate: false
+          sortKey: -1745794524686
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/mais-recentes
+        name: Listar todos os atendimentos (mais recente primeiro)
+        meta:
+          id: req_269d920351ee45d9b9b016a64335aa74
+          created: 1745794572422
+          modified: 1745794948855
+          isPrivate: false
+          sortKey: -1745794532336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/atendimentos/3
+        name: Listar atendimento por ID
+        meta:
+          id: req_ff34a841412e4d68882a556b7ab34403
+          created: 1745794573987
+          modified: 1745794994793
+          isPrivate: false
+          sortKey: -1745794528511
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f2c98590bd3b4195bc7989c21d495f43239d2ef8
+    created: 1744836003041
+    modified: 1744836003041
+environments:
+  name: Base Environment
+  meta:
+    id: env_f2c98590bd3b4195bc7989c21d495f43239d2ef8
+    created: 1744836003038
+    modified: 1744836003038
+    isPrivate: false
